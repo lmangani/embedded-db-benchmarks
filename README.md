@@ -13,15 +13,15 @@ _Warning: This is far from a rigorous benchmark._
 **Benchmarks:**
 
 ```
-chdb:version: avg=0.011s min=0.011s max=0.011s (2 runs)
-chdb:count: avg=0.215s min=0.176s max=0.254s (2 runs)
-chdb:groupby: avg=0.799s min=0.785s max=0.813s (2 runs)
-chdb:groupby-local: avg=0.300s min=0.294s max=0.306s (2 runs)
+chdb:version: avg=0.016s min=0.015s max=0.017s (3 runs)
+chdb:count: avg=0.278s min=0.154s max=0.459s (3 runs)
+chdb:groupby: avg=0.705s min=0.678s max=0.746s (3 runs)
+chdb:groupby-local: avg=0.376s min=0.373s max=0.380s (3 runs)
 
-duckdb:version: avg=0.000s min=0.000s max=0.000s (2 runs)
-duckdb:count: avg=0.231s min=0.151s max=0.311s (2 runs)
-duckdb:groupby: avg=0.920s min=0.811s max=1.029s (2 runs)
-duckdb:groupby-local: avg=0.325s min=0.324s max=0.326s (2 runs)
+duckdb:version: avg=0.000s min=0.000s max=0.001s (3 runs)
+duckdb:count: avg=0.361s min=0.113s max=0.855s (3 runs)
+duckdb:groupby: avg=0.727s min=0.724s max=0.731s (3 runs)
+duckdb:groupby-local: avg=0.468s min=0.464s max=0.474s (3 runs)
 ```
 
 ## Instructions
