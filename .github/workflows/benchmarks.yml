@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry pytest
         poetry install
+        wget -q https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet
     - name: Test with poetry
       run: |
-        wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet
         poetry run python3 benchmark.py
