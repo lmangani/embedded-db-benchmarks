@@ -1,3 +1,5 @@
+<img src="https://avatars.githubusercontent.com/u/132536224?s=200&v=4" />
+
 # chDB vs. DuckDB benchmarks
 
 This project benchmarks two simple queries against chDB and DuckDB. <br>
