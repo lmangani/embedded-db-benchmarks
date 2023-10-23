@@ -35,5 +35,4 @@ pip3 install -r requirements.txt
 
 ```shell
 ./run.sh
-./run-local.sh
 ```
