@@ -7,7 +7,7 @@ from chdb import session as chs
 ITERATIONS = 2
 
 # Names of queries to load from the "./queries/" folder
-BENCHMARKS = ["version", "count", "groupby"]
+BENCHMARKS = ["version", "count", "groupby", "groupby-local"]
 
 
 def benchmark_db(db, execute_fn):
