@@ -1,4 +1,4 @@
-# chDB vs. DuckDB benchmarks on cloud
+# chDB vs. DuckDB benchmarks
 
 This project benchmarks two simple queries against chDB and DuckDB. <br>
 It runs the benchmarks as native queries against s3/cloud hosted parquet files. <br>
