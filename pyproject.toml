@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "chdb-duckdb-benchmark"
+version = "0.1.0"
+description = ""
+authors = ["Lorenzo Mangani <lorenzo.mangani@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+chdb = "^0.14.2"
+duckdb = "0.9.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
