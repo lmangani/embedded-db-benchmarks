@@ -4,7 +4,7 @@ import chdb
 from chdb import session as chs
 
 # Number of times to benchmark each query
-ITERATIONS = 2
+ITERATIONS = 3
 
 # Names of queries to load from the "./queries/" folder
 BENCHMARKS = ["version", "count", "groupby", "groupby-local"]
