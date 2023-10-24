@@ -29,7 +29,7 @@ duckdb:groupby-local: avg=0.468s min=0.464s max=0.474s (3 runs)
 
 1. Clone this repo and `cd` into it
 
-2. Install Requirements
+2. Install Test Requirements with `poetry`
 ```shell
 poetry install
 ```
