@@ -12,6 +12,7 @@ _Warning: This is far from a rigorous benchmark._
 
 **Benchmarks:**
 
+> [Github Action](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml) Free Runner _(2x vCPU, 7GB RAM)_
 ```
 chdb:version: avg=0.016s min=0.015s max=0.017s (3 runs)
 chdb:count: avg=0.278s min=0.154s max=0.459s (3 runs)
