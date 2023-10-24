@@ -30,11 +30,10 @@ duckdb:groupby-local: avg=0.468s min=0.464s max=0.474s (3 runs)
 
 2. Install Requirements
 ```shell
-pip3 install -r requirements.txt
+poetry install
 ```
 
 3. Run the benchmark
-
 ```shell
 ./run.sh
 ```
