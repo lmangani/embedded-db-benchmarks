@@ -1,4 +1,4 @@
-<img src="https://avatars.githubusercontent.com/u/132536224?s=200&v=4" />
+<img src="https://github.com/lmangani/embedded-olap-benchmarks/assets/1423657/ba8f08fe-49db-4f77-a2b5-71181e87233e" width=350 />
 
 # Embedded OLAP benchmarks
 
