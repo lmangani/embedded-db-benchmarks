@@ -1,8 +1,8 @@
 <img src="https://avatars.githubusercontent.com/u/132536224?s=200&v=4" />
 
-# chDB vs. DuckDB benchmarks
+# Embedded OLAP benchmarks
 
-This project benchmarks two simple queries against chDB and DuckDB. <br>
+This project benchmarks embedded OLAP engines such as chDB and DuckDB. <br>
 It runs the benchmarks as native queries against local/cloud hosted datasets.. <br>
 It runs all benchmark iterations in the same session and does not reset caches. <br>
 

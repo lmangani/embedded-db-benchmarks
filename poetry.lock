@@ -72,7 +72,20 @@ files = [
     {file = "duckdb-0.9.1.tar.gz", hash = "sha256:603a878746015a3f2363a65eb48bcbec816261b6ee8d71eee53061117f6eef9d"},
 ]
 
+[[package]]
+name = "glaredb"
+version = "0.5.1"
+description = "GlareDB is a fast SQL database for querying and analyzing distributed data."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "glaredb-0.5.1-cp37-abi3-macosx_10_7_x86_64.whl", hash = "sha256:d129be577931223b44faefa30f5a8b90093aeb623d87af37db46f1e583f23ee0"},
+    {file = "glaredb-0.5.1-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:aaada762fa8845d8f2fb106c2663b4aa53780d99e8d847a8add5cc0274da0bbe"},
+    {file = "glaredb-0.5.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c2f6b5d5507376c2fc9f609544e02d79a76f430e32ccdc1322f6095d548620d8"},
+    {file = "glaredb-0.5.1-cp37-abi3-win_amd64.whl", hash = "sha256:812e5a4ddbe94da7d0ba31bcb63b571866e9eda6dc0e0c60bcdc96d1b09a9ec5"},
+]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "a0ee2a22dfe0aef8c9b1136f10ce22bf4f83adcd89c9f5fa041041697781cb65"
+content-hash = "a14d133efea1e4ff29f9a1a4c30c46d68cc2a7cae590ea5387120a15c393cb33"

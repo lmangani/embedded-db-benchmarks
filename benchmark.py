@@ -2,6 +2,7 @@ from datetime import datetime
 import duckdb
 import chdb
 from chdb import session as chs
+import glaredb
 
 # Number of times to benchmark each query
 ITERATIONS = 3
@@ -43,6 +44,9 @@ def main():
 
     ddb = duckdb.connect()
     benchmark_db("duckdb", lambda query: ddb.execute(query))
+
+    gdb = glaredb.connect()
+    benchmark_db("glaredb", lambda query: gdb.sql(query))
 
 if __name__ == "__main__":
     main()

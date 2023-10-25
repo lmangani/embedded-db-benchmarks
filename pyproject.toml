@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "chdb-duckdb-benchmark"
-version = "0.1.0"
+name = "embedded-olap-benchmarks"
+version = "0.1.1"
 description = ""
 authors = ["Lorenzo Mangani <lorenzo.mangani@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 chdb = "^0.14.2"
-duckdb = "0.9.1"
+duckdb = "^0.9.1"
+glaredb = "^0.5.1"
 
 [tool.poetry.dev-dependencies]
 
