@@ -14,15 +14,20 @@ _Warning: This is far from a rigorous benchmark._
 
 > [Github Action](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml) Free Runner _(2x vCPU, 7GB RAM)_
 ```
-chdb:version: avg=0.016s min=0.015s max=0.017s (3 runs)
-chdb:count: avg=0.278s min=0.154s max=0.459s (3 runs)
-chdb:groupby: avg=0.705s min=0.678s max=0.746s (3 runs)
-chdb:groupby-local: avg=0.376s min=0.373s max=0.380s (3 runs)
+chdb:version: avg=0.018s min=0.017s max=0.020s (3 runs)
+chdb:count: avg=0.312s min=0.210s max=0.502s (3 runs)
+chdb:groupby: avg=0.772s min=0.742s max=0.824s (3 runs)
+chdb:groupby-local: avg=0.436s min=0.432s max=0.441s (3 runs)
 
 duckdb:version: avg=0.000s min=0.000s max=0.001s (3 runs)
-duckdb:count: avg=0.361s min=0.113s max=0.855s (3 runs)
-duckdb:groupby: avg=0.727s min=0.724s max=0.731s (3 runs)
-duckdb:groupby-local: avg=0.468s min=0.464s max=0.474s (3 runs)
+duckdb:count: avg=0.358s min=0.120s max=0.823s (3 runs)
+duckdb:groupby: avg=0.778s min=0.769s max=0.793s (3 runs)
+duckdb:groupby-local: avg=0.498s min=0.494s max=0.505s (3 runs)
+
+glaredb:version: avg=0.000s min=0.000s max=0.001s (3 runs)
+glaredb:count: avg=0.166s min=0.152s max=0.178s (3 runs)
+glaredb:groupby: avg=0.138s min=0.134s max=0.144s (3 runs)
+glaredb:groupby-local: avg=0.002s min=0.001s max=0.003s (3 runs) 🔥
 ```
 
 ## Instructions
