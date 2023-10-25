@@ -2,9 +2,8 @@
 
 # Embedded OLAP benchmarks
 
-This project benchmarks embedded OLAP engines such as chDB and DuckDB. <br>
-It runs the benchmarks as native queries against local/cloud hosted datasets.. <br>
-It runs all benchmark iterations in the same session and does not reset caches. <br>
+This project benchmarks embedded OLAP engines such as [chDB](https://chdb.dev) and [DuckDB](https://duckdb.org). <br>
+Benchmark queries for supported databases are executed within Github Actions. <br>
 
 _Warning: This is far from a rigorous benchmark._
 
