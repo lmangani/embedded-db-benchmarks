@@ -9,10 +9,10 @@ DBNAME = os.environ['DBNAME'] or '*'
 
 # Number of times to benchmark each query
 ITERATIONS = os.environ['ITERATIONS'] or 3
+ITERATIONS = int(ITERATIONS)
 
 # Names of queries to load from the "./queries/" folder
 BENCHMARKS = ["version", "count", "groupby", "groupby-local"]
-
 
 def benchmark_db(db, execute_fn):
     """ Benchmarks all queries against one datastore """
