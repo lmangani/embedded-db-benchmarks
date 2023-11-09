@@ -2,10 +2,6 @@ name: Benchmark Matrix
 
 on:
    workflow_dispatch:
-    inputs:
-      ITERATIONS:
-        description: 'Test iterations, default 3'
-        required: false
 
 jobs:
   bench:
@@ -31,7 +27,7 @@ jobs:
       uses: runforesight/workflow-telemetry-action@v1.8.7     
     - name: Test with poetry
       env:
-        ITERATIONS: ${{ github.event.inputs.ITERATIONS || 3 }}
+        ITERATIONS: 3
         DBNAME: ${{ matrix.DBNAME }}
       run: |
         poetry run python3 benchmark.py > /tmp/report.txt
