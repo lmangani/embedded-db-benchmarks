@@ -1,11 +1,14 @@
+import os
 from datetime import datetime
 import duckdb
 import chdb
 from chdb import session as chs
 import glaredb
 
+DBNAME = os.environ['DBNAME'] or '*'
+
 # Number of times to benchmark each query
-ITERATIONS = 3
+ITERATIONS = os.environ['ITERATIONS'] or 3
 
 # Names of queries to load from the "./queries/" folder
 BENCHMARKS = ["version", "count", "groupby", "groupby-local"]
@@ -37,16 +40,28 @@ def benchmark_db(db, execute_fn):
             ITERATIONS,
         ))
 
-
 def main():
-    chdbs = chs.Session()
-    benchmark_db("chdb", lambda query: chdb.query(query))
-
-    ddb = duckdb.connect()
-    benchmark_db("duckdb", lambda query: ddb.execute(query))
-
-    gdb = glaredb.connect()
-    benchmark_db("glaredb", lambda query: gdb.sql(query))
+    match DBNAME:
+        case "chdb":
+            print("Testing chdb")
+            chdbs = chs.Session()
+            benchmark_db("chdb", lambda query: chdb.query(query))
+        case "duckdb":
+            print("Testing duckdb")
+            ddb = duckdb.connect()
+            benchmark_db("duckdb", lambda query: ddb.execute(query))
+        case "glaredb":
+            print("Testing glaredb")
+            gdb = glaredb.connect()
+            benchmark_db("glaredb", lambda query: gdb.sql(query))
+        case _:
+            print("Testing all databases.")
+            chdbs = chs.Session()
+            benchmark_db("chdb", lambda query: chdb.query(query))
+            ddb = duckdb.connect()
+            benchmark_db("duckdb", lambda query: ddb.execute(query))
+            gdb = glaredb.connect()
+            benchmark_db("glaredb", lambda query: gdb.sql(query))
 
 if __name__ == "__main__":
     main()
