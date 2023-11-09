@@ -20,6 +20,8 @@ jobs:
         pip install poetry pytest
         poetry install
         wget -q https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet
+    - name: Workflow Telemetry
+      uses: runforesight/workflow-telemetry-action@v1.8.7     
     - name: Test with poetry
       run: |
         poetry run python3 benchmark.py
