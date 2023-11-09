@@ -1,12 +1,19 @@
-name: CI Benchmark
+name: Benchmark Matrix
 
 on:
-  workflow_dispatch:
+   workflow_dispatch:
+    inputs:
+      ITERATIONS:
+        description: 'Test iterations, default 3'
+        required: false
 
 jobs:
-  build:
-
+  bench:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        DBNAME: [ "chdb", "duckdb", "glaredb"]
 
     steps:
     - uses: actions/checkout@v3
@@ -23,5 +30,12 @@ jobs:
     - name: Workflow Telemetry
       uses: runforesight/workflow-telemetry-action@v1.8.7     
     - name: Test with poetry
+      env:
+        ITERATIONS: ${{ github.event.inputs.ITERATIONS || 3 }}
+        DBNAME: ${{ matrix.DBNAME }}
       run: |
-        poetry run python3 benchmark.py
+        poetry run python3 benchmark.py > /tmp/report.txt
+    - name: Summary Report
+      run: |
+        echo "### ${{ matrix.DBNAME }}" >> $GITHUB_STEP_SUMMARY
+        cat /tmp/report.txt >> $GITHUB_STEP_SUMMARY
