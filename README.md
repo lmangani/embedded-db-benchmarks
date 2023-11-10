@@ -5,7 +5,7 @@
 This project benchmarks embedded OLAP engines such as [chDB](https://chdb.dev) and [DuckDB](https://duckdb.org). <br>
 Benchmark queries for supported databases are executed within Github Actions. <br>
 
-_Warning: This is far from a rigorous benchmark._
+:warning: _Focus on free, low-resource runners only. not a rigorous benchmark._
 
 ## Results
 
