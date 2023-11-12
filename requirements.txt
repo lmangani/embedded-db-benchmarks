@@ -1,4 +1,4 @@
 poetry
-chdb
+chdb==0.16.0rc2
 duckdb
 glaredb
