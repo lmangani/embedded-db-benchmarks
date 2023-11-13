@@ -64,22 +64,16 @@ def main():
     match DBNAME:
         case "chdb":
             print("Testing chdb " + str(chdb.__version__))
-            with chs.Session() as chdbs:
-                benchmark_db("chdb", lambda query: chdb.query(query))
+            chdbs = chs.Session()
+            benchmark_db("chdb", lambda query: chdb.query(query))
         case "duckdb":
             print("Testing duckdb " + str(duckdb.__version__))
-            with duckdb.connect() as ddb:
-                benchmark_db("duckdb", lambda query: ddb.execute(query))
+            ddb = duckdb.connect()
+            benchmark_db("duckdb", lambda query: ddb.execute(query))
         case "glaredb":
             print("Testing glaredb")
-            with glaredb.connect() as gdb:
-                benchmark_db("glaredb", lambda query: gdb.sql(query).show())
-        case _:
-            print("Testing all databases.")
-            with chs.Session() as chdbs, duckdb.connect() as ddb, glaredb.connect() as gdb:
-                benchmark_db("chdb", lambda query: chdb.query(query))
-                benchmark_db("duckdb", lambda query: ddb.execute(query))
-                benchmark_db("glaredb", lambda query: gdb.sql(query).show())
-
+            gdb = glaredb.connect()
+            benchmark_db("glaredb", lambda query: gdb.sql(query).show())
+        
 if __name__ == "__main__":
     main()
