@@ -53,7 +53,7 @@ def main():
         case "glaredb":
             print("Testing glaredb")
             gdb = glaredb.connect()
-            benchmark_db("glaredb", lambda query: gdb.sql(query))
+            benchmark_db("glaredb", lambda query: gdb.sql(query).execute())
         case _:
             print("Testing all databases.")
             chdbs = chs.Session()
@@ -61,7 +61,7 @@ def main():
             ddb = duckdb.connect()
             benchmark_db("duckdb", lambda query: ddb.execute(query))
             gdb = glaredb.connect()
-            benchmark_db("glaredb", lambda query: gdb.sql(query))
+            benchmark_db("glaredb", lambda query: gdb.sql(query).execute())
 
 if __name__ == "__main__":
     main()
