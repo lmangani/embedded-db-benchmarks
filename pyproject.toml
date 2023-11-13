@@ -5,6 +5,7 @@ description = ""
 authors = ["Lorenzo Mangani <lorenzo.mangani@gmail.com>"]
 
 [tool.poetry.dependencies]
+psutil = "^5.9.6"
 python = "^3.9"
 chdb = "^0.16.0rc2"
 duckdb = "^0.9.1"
