@@ -38,8 +38,6 @@ glaredb:groupby-local: avg=0.363s min=0.353s max=0.378s (3 runs) | Memory used: 
 
 
 ## [Example Action Report](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml)
-![image](https://github.com/lmangani/embedded-db-benchmarks/assets/1423657/e5961b6e-9775-4f18-adde-edbb52b672f2)
-
 
 ## Instructions
 
