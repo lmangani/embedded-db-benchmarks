@@ -63,7 +63,7 @@ def benchmark_db(db: str, execute_fn):
 def main():
     match DBNAME:
         case "chdb":
-            print("Testing chdb " + str(chdb.__version__))
+            print("Testing chdb " + str(chdb.engine_version))
             chdbs = chs.Session()
             benchmark_db("chdb", lambda query: chdb.query(query))
         case "duckdb":
