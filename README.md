@@ -15,7 +15,7 @@ Benchmark queries for supported databases are executed within Github Actions. <b
 
 <!-- START-RESULTS -->
 ```
-Testing chdb 23.10.1.1
+Testing chdb 0.16.0rc2 (23.10.1.1)
 chdb:version: avg=0.012s min=0.011s max=0.014s (3 runs) | Memory used: -2.47 MB
 chdb:count: avg=0.135s min=0.064s max=0.264s (3 runs) | Memory used: 3.91 MB
 chdb:groupby: avg=0.435s min=0.407s max=0.478s (3 runs) | Memory used: 25.98 MB
@@ -27,7 +27,7 @@ duckdb:count: avg=0.360s min=0.083s max=0.900s (3 runs) | Memory used: 26.02 MB
 duckdb:groupby: avg=0.697s min=0.685s max=0.715s (3 runs) | Memory used: 25.86 MB
 duckdb:groupby-local: avg=0.527s min=0.524s max=0.529s (3 runs) | Memory used: 0.62 MB
 
-Testing glaredb latest
+Testing glaredb 0.5.1
 glaredb:version: avg=0.001s min=0.000s max=0.001s (3 runs) | Memory used: 11.38 MB
 glaredb:count: avg=0.157s min=0.071s max=0.307s (3 runs) | Memory used: 9.00 MB
 glaredb:groupby: avg=0.489s min=0.482s max=0.496s (3 runs) | Memory used: 200.90 MB
