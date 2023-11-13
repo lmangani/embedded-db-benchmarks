@@ -68,15 +68,15 @@ def benchmark_db(db: str, execute_fn):
 def main():
     match DBNAME:
         case "chdb":
-            logging.info("Testing chdb", chdb.__version__)
+            logging.info("Testing chdb " + str(chdb.__version__))
             with chs.Session() as chdbs:
                 benchmark_db("chdb", lambda query: chdb.query(query))
         case "duckdb":
-            logging.info("Testing duckdb", duckdb.__version__)
+            logging.info("Testing duckdb " + str(duckdb.__version__))
             with duckdb.connect() as ddb:
                 benchmark_db("duckdb", lambda query: ddb.execute(query))
         case "glaredb":
-            logging.info("Testing glaredb", "latest")
+            logging.info("Testing glaredb" + "latest")
             with glaredb.connect() as gdb:
                 benchmark_db("glaredb", lambda query: gdb.sql(query).show())
         case _:
