@@ -2,26 +2,23 @@
 
 [[package]]
 name = "chdb"
-version = "0.14.2"
+version = "0.16.0rc2"
 description = "chDB is an in-process SQL OLAP Engine powered by ClickHouse"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "chdb-0.14.2-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:5b55e2182fbb3c8d2b0548b8ca3e276e60742c9ab9faaafb948349d0587941d6"},
-    {file = "chdb-0.14.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:317a89cc44f73fbc3df462e214f9022f1d327d05f707a287a88123358ff8654d"},
-    {file = "chdb-0.14.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e1754541e0415980d3e182d39b97691a1c92735db20c7ccc3e2fc3138fc0a075"},
-    {file = "chdb-0.14.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c7b5421d173e94070698c781bfb462c46115c7943fd10a4bbab293fb4813f931"},
-    {file = "chdb-0.14.2-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:dc9e9d1fabf6ed62faa4384167b09495e1cfd267a4df5973fcb806c5130de6b2"},
-    {file = "chdb-0.14.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:f60abaa3f3e12a7fb3b22fcf3bd6f9e412141e010095b83ff2be5552276b457b"},
-    {file = "chdb-0.14.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9d99cb59c306af2fba304bc05ad0bf130f38b9178b8c336363920ec26a774ce4"},
-    {file = "chdb-0.14.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a29b3058fb2170f0722d13c6726fe5618beea7f0274038f892a69059cbd68e27"},
-    {file = "chdb-0.14.2-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:ad0850f182dda96f4d29f477c76bc1fb101aa086ee02f73cfd3173f423746d4a"},
-    {file = "chdb-0.14.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:49cbfeac2d9fdfb918335cca1bdaba0f4c4c3ffc19f1baa5c6572d57736f4b2b"},
-    {file = "chdb-0.14.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a6fc3379d7b56be9cdc6bdd792cb334ff9967c66e252ebcc57253def696b1c42"},
-    {file = "chdb-0.14.2-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:bcf2a9f8924a0a15d74122d65c30b49b02de709d1d8cd53f23ba83951eaf56e9"},
-    {file = "chdb-0.14.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:4e1ce077d3547629d95acf137db6650f589e3877187b142555809485aef4f2a8"},
-    {file = "chdb-0.14.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d09701e3551a7c98f226bee1f97f7d9c08de966a03d90b1d47c1434655744df0"},
-    {file = "chdb-0.14.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:07559850cc98c2f14a38632e253acf628543d90bae299cf784beaf8ac08438db"},
+    {file = "chdb-0.16.0rc2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:f2ac75c7410931f82b959b25e717109e7516f32427da0ecb8822b93edfc21a45"},
+    {file = "chdb-0.16.0rc2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5da9fcce45ef10475bb23ca16e71819deec1a99a49092d9dffd67b6b960510c5"},
+    {file = "chdb-0.16.0rc2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:015d87b479477af30ba21e16718f492bb12c53228df15ba58ae4edab497fd2bb"},
+    {file = "chdb-0.16.0rc2-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:6ed6b877a3714de0f5df044a855d8deeac774a87e2cd38af4066058d0b10ff18"},
+    {file = "chdb-0.16.0rc2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:a8613e76c5eb1d492fd6db1b948a2ec298705368f2c1b70dd5b6a5635a7a8bae"},
+    {file = "chdb-0.16.0rc2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:814b851a0d35dec04830d564dd1c1d8d759d3c0d233f66da64c2f0a28095c804"},
+    {file = "chdb-0.16.0rc2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3c4a17b105ebe5e51fdde380fd055e5a89692653de5092eaa3218821d01e8da0"},
+    {file = "chdb-0.16.0rc2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8bc0117c98ffd887040bc8b7e878d0c3f310de6f74dfc71fae6fa84da8337f24"},
+    {file = "chdb-0.16.0rc2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e67a1f01cc0a696f29e5366c11911917c91f557b4d89d7a1a3d123935779f463"},
+    {file = "chdb-0.16.0rc2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:12e23a23747b7a3106e88bfa12ae206f41ba74e0406e091b9f6ea5256942bb53"},
+    {file = "chdb-0.16.0rc2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9c93848db911bfcbbb628ca5a0dbb7565602f4c6c465efa910954d72874c1a94"},
+    {file = "chdb-0.16.0rc2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:371b8d468f9be35beed126224d8e2aa1c327917a4d0a64989b7dadeb6088fca5"},
 ]
 
 [[package]]
@@ -88,4 +85,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "a14d133efea1e4ff29f9a1a4c30c46d68cc2a7cae590ea5387120a15c393cb33"
+content-hash = "2157a6a6797bb4c67036bcb7d5569696df15f9fe7ab9ef7fee10a5ce5261974c"

@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "embedded-olap-benchmarks"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Lorenzo Mangani <lorenzo.mangani@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-chdb = "^0.14.2"
+chdb = "^0.16.0rc2"
 duckdb = "^0.9.1"
 glaredb = "^0.5.1"
 
