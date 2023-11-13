@@ -1,18 +1,13 @@
-from contextlib import contextmanager
 import os
 import sys
-from datetime import datetime
-import logging
 import psutil
+from datetime import datetime
+from contextlib import contextmanager
 
 import duckdb
 import chdb
 from chdb import session as chs
 import glaredb
-
-
-# Setup basic logging
-logging.basicConfig(level=logging.INFO)
 
 DBNAME = os.getenv('DBNAME', '*')
 ITERATIONS = int(os.getenv('ITERATIONS', 3))
@@ -39,7 +34,7 @@ def load_query(db: str, name: str) -> str:
         with open(f"queries/{name}.{db}.sql") as f:
             return f.read()
     except FileNotFoundError:
-        logging.error(f"Query file for {name} not found.")
+        print(f"Query file for {name} not found.")
         sys.exit(1)
 
 def benchmark_db(db: str, execute_fn):
@@ -54,7 +49,7 @@ def benchmark_db(db: str, execute_fn):
                 try:
                     results = execute_fn(query)
                 except Exception as e:
-                    logging.error(f"Error executing query on {db}: {e}")
+                    print(f"Error executing query on {db}: {e}")
                     continue
             end = datetime.now()
             deltas.append((end - start).total_seconds())
@@ -63,24 +58,24 @@ def benchmark_db(db: str, execute_fn):
         if deltas:
             avg = sum(deltas) / len(deltas)
             mem_used = mem_usage_after - mem_usage_before
-            logging.info(f"{db}:{name}: avg={avg:.3f}s min={min(deltas):.3f}s max={max(deltas):.3f}s ({ITERATIONS} runs) | Memory used: {mem_used:.2f} MB")
+            print(f"{db}:{name}: avg={avg:.3f}s min={min(deltas):.3f}s max={max(deltas):.3f}s ({ITERATIONS} runs) | Memory used: {mem_used:.2f} MB")
 
 def main():
     match DBNAME:
         case "chdb":
-            logging.info("Testing chdb " + str(chdb.__version__))
+            print("Testing chdb " + str(chdb.__version__))
             with chs.Session() as chdbs:
                 benchmark_db("chdb", lambda query: chdb.query(query))
         case "duckdb":
-            logging.info("Testing duckdb " + str(duckdb.__version__))
+            print("Testing duckdb " + str(duckdb.__version__))
             with duckdb.connect() as ddb:
                 benchmark_db("duckdb", lambda query: ddb.execute(query))
         case "glaredb":
-            logging.info("Testing glaredb" + "latest")
+            print("Testing glaredb")
             with glaredb.connect() as gdb:
                 benchmark_db("glaredb", lambda query: gdb.sql(query).show())
         case _:
-            logging.info("Testing all databases.")
+            print("Testing all databases.")
             with chs.Session() as chdbs, duckdb.connect() as ddb, glaredb.connect() as gdb:
                 benchmark_db("chdb", lambda query: chdb.query(query))
                 benchmark_db("duckdb", lambda query: ddb.execute(query))
