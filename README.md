@@ -13,20 +13,21 @@ Benchmark queries for supported databases are executed within Github Actions. <b
 
 > [Github Action](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml) Free Runner _(2x vCPU, 7GB RAM)_
 ```
-chdb:version: avg=0.018s min=0.017s max=0.020s (3 runs)
-chdb:count: avg=0.312s min=0.210s max=0.502s (3 runs)
-chdb:groupby: avg=0.772s min=0.742s max=0.824s (3 runs)
-chdb:groupby-local: avg=0.436s min=0.432s max=0.441s (3 runs)
+chdb:version: avg=0.015s min=0.015s max=0.016s (3 runs)
+chdb:count: avg=0.195s min=0.099s max=0.354s (3 runs)
+chdb:groupby: avg=0.487s min=0.482s max=0.497s (3 runs)
+chdb:groupby-local: avg=0.362s min=0.359s max=0.364s (3 runs)
 
-duckdb:version: avg=0.000s min=0.000s max=0.001s (3 runs)
-duckdb:count: avg=0.358s min=0.120s max=0.823s (3 runs)
-duckdb:groupby: avg=0.778s min=0.769s max=0.793s (3 runs)
-duckdb:groupby-local: avg=0.498s min=0.494s max=0.505s (3 runs)
+duckdb:version: avg=0.000s min=0.000s max=0.000s (3 runs)
+duckdb:count: avg=0.361s min=0.101s max=0.875s (3 runs)
+duckdb:groupby: avg=0.619s min=0.560s max=0.722s (3 runs)
+duckdb:groupby-local: avg=0.352s min=0.340s max=0.372s (3 runs)
 
 glaredb:version: avg=0.001s min=0.000s max=0.002s (3 runs)
-glaredb:count: avg=0.182s min=0.073s max=0.384s (3 runs)
-glaredb:groupby: avg=0.783s min=0.772s max=0.799s (3 runs)
-glaredb:groupby-local: avg=0.625s min=0.612s max=0.641s (3 runs)
+glaredb:count: avg=0.176s min=0.113s max=0.300s (3 runs)
+glaredb:groupby: avg=0.905s min=0.866s max=0.949s (3 runs)
+glaredb:groupby-local: avg=0.666s min=0.623s max=0.689s (3 runs)
+
 ```
 
 ## [Example Action Report](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml)
