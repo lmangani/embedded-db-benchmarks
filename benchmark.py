@@ -61,7 +61,7 @@ def main():
             ddb = duckdb.connect()
             benchmark_db("duckdb", lambda query: ddb.execute(query))
             gdb = glaredb.connect()
-            benchmark_db("glaredb", lambda query: gdb.sql(query).execute())
+            benchmark_db("glaredb", lambda query: gdb.execute(query))
 
 if __name__ == "__main__":
     main()
