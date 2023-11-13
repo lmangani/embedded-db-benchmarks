@@ -23,10 +23,10 @@ duckdb:count: avg=0.358s min=0.120s max=0.823s (3 runs)
 duckdb:groupby: avg=0.778s min=0.769s max=0.793s (3 runs)
 duckdb:groupby-local: avg=0.498s min=0.494s max=0.505s (3 runs)
 
-glaredb:version: avg=0.000s min=0.000s max=0.001s (3 runs)
-glaredb:count: avg=0.166s min=0.152s max=0.178s (3 runs)
-glaredb:groupby: avg=0.138s min=0.134s max=0.144s (3 runs)
-glaredb:groupby-local: avg=0.002s min=0.001s max=0.003s (3 runs) 🔥
+glaredb:version: avg=0.001s min=0.000s max=0.002s (3 runs)
+glaredb:count: avg=0.182s min=0.073s max=0.384s (3 runs)
+glaredb:groupby: avg=0.783s min=0.772s max=0.799s (3 runs)
+glaredb:groupby-local: avg=0.625s min=0.612s max=0.641s (3 runs)
 ```
 
 ## [Example Action Report](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml)
