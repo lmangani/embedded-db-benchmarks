@@ -27,7 +27,7 @@ For the latest results, check the latest Action reports.
 <!-- START-RESULTS -->
 ```
 Testing chdb 0.16.0rc2 (23.10.1.1)
-chdb:version: avg=0.012s min=0.011s max=0.014s (3 runs) | Memory used: -2.47 MB
+chdb:version: avg=0.012s min=0.011s max=0.014s (3 runs) | Memory used: 2.47 MB
 chdb:count: avg=0.135s min=0.064s max=0.264s (3 runs) | Memory used: 3.91 MB
 chdb:groupby: avg=0.435s min=0.407s max=0.478s (3 runs) | Memory used: 25.98 MB
 
