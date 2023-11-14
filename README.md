@@ -2,7 +2,7 @@
 
 # Embedded OLAP benchmarks
 
-This project benchmarks embedded OLAP engines such as [chDB](https://chdb.dev) and [DuckDB](https://duckdb.org). <br>
+This project benchmarks embedded OLAP engines using Python 3.x <br>
 Benchmark queries for supported databases are executed within Github Actions. <br>
 
 :warning: _Focus on free, low-resource runners. NOT intended as a rigorous benchmark!_
