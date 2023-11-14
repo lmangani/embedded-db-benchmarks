@@ -76,7 +76,7 @@ def main():
             print("Testing glaredb")
             gdb = glaredb.connect()
             benchmark_db("glaredb", lambda query: gdb.sql(query).show())
-        case "glaredb":
+        case "databend":
             print("Testing databend")
             databendx = SessionContext()
             benchmark_db("databend", lambda query: databendx.sql(query).collect())
