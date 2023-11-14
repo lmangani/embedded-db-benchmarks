@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        DBNAME: [ "chdb", "duckdb", "glaredb"]
+        DBNAME: [ "chdb", "duckdb", "glaredb", "databend"]
 
     steps:
     - uses: actions/checkout@v3

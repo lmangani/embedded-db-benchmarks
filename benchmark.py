@@ -13,7 +13,7 @@ from databend import SessionContext
 
 DBNAME = os.getenv('DBNAME', '*')
 ITERATIONS = int(os.getenv('ITERATIONS', 3))
-BENCHMARKS = ["version", "count", "groupby", "groupby-local"]
+BENCHMARKS = ["version", "count", "groupby"]
 
 @contextmanager
 def suppress_stdout():
@@ -76,10 +76,14 @@ def main():
             print("Testing glaredb")
             gdb = glaredb.connect()
             benchmark_db("glaredb", lambda query: gdb.sql(query).show())
-        case "glaredb":
+        case "databend":
             print("Testing databend")
             databendx = SessionContext()
             benchmark_db("databend", lambda query: databendx.sql(query).collect())
+        case "datafusion":
+            print("Testing datafusion")
+            databendx = SessionContext()
+            benchmark_db("datafusion", lambda query: databendx.sql(query).collect())
 
 if __name__ == "__main__":
     main()
