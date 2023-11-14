@@ -5,11 +5,22 @@
 This project benchmarks embedded OLAP engines such as [chDB](https://chdb.dev) and [DuckDB](https://duckdb.org). <br>
 Benchmark queries for supported databases are executed within Github Actions. <br>
 
-:warning: _Focus on free, low-resource runners only. not a rigorous benchmark._
+:warning: _Focus on free, low-resource runners. NOT intended as a rigorous benchmark!_
+
+### OLAP Racers 🏁
+
+- [chdb](https://doc.chdb.io)
+- [duckdb](https://duckdb.org)
+- [glaredb](https://glaredb.com)
+- [databend](https://databend.com)
+
+
 
 ## Results
 
-**Benchmarks:**
+For the latest results, check the latest Action reports.
+
+### [Example Action Report](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml)
 
 > [Github Action](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml) Free Runner _(2x vCPU, 7GB RAM)_
 
@@ -36,8 +47,6 @@ glaredb:groupby-local: avg=0.363s min=0.353s max=0.378s (3 runs) | Memory used: 
 ```
 <!-- END-RESULTS -->
 
-
-## [Example Action Report](https://github.com/lmangani/embedded-olap-benchmarks/actions/workflows/benchmarks.yml)
 
 ## Instructions
 
