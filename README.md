@@ -44,6 +44,11 @@ glaredb:count: avg=0.157s min=0.071s max=0.307s (3 runs) | Memory used: 9.00 MB
 glaredb:groupby: avg=0.489s min=0.482s max=0.496s (3 runs) | Memory used: 200.90 MB
 glaredb:groupby-local: avg=0.363s min=0.353s max=0.378s (3 runs) | Memory used: 156.86 MB
 
+Testing databend 1.2.207
+databend:version: avg=0.013s min=0.001s max=0.038s (3 runs) | Memory used: 3.50 MB
+databend:count: avg=0.237s min=0.216s max=0.277s (3 runs) | Memory used: 7.50 MB
+databend:groupby: avg=1.629s min=1.580s max=1.674s (3 runs) | Memory used: 462.03 MB
+databend:groupby-local: (WIP)
 ```
 <!-- END-RESULTS -->
 
