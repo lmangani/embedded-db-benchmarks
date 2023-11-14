@@ -13,7 +13,7 @@ Benchmark queries for supported databases are executed within Github Actions. <b
 - [duckdb](https://duckdb.org)
 - [glaredb](https://glaredb.com)
 - [databend](https://databend.com)
-
+- [datafusion](https://arrow.apache.org/datafusion-python/)
 
 
 ## Results
@@ -45,6 +45,11 @@ Testing databend 1.2.207
 databend:version: avg=0.013s min=0.001s max=0.038s (3 runs) | Memory used: 3.50 MB
 databend:count: avg=0.237s min=0.216s max=0.277s (3 runs) | Memory used: 7.50 MB
 databend:groupby: avg=1.629s min=1.580s max=1.674s (3 runs) | Memory used: 462.03 MB
+
+Testing datafusion 32.0.0
+datafusion:version: avg=0.016s min=0.001s max=0.045s (3 runs) | Memory used: 3.62 MB
+datafusion:count: avg=0.243s min=0.179s max=0.338s (3 runs) | Memory used: 7.12 MB
+datafusion:groupby: avg=1.860s min=1.820s max=1.920s (3 runs) | Memory used: 474.79 MB
 ```
 <!-- END-RESULTS -->
 
