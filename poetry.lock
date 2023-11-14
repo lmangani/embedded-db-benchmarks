@@ -22,6 +22,21 @@ files = [
 ]
 
 [[package]]
+name = "databend"
+version = "1.2.207"
+description = "Databend Python Binding"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "databend-1.2.207-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:a809608d338ad471b38253e434b9c27932f3ec0ff306f17d89a02ec9e5de6e87"},
+    {file = "databend-1.2.207-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:79d784381c74a43c21c17bf50770a5c379bedb9e7d23dbc449c7fcd8ba3ad7a7"},
+]
+
+[package.extras]
+docs = ["pdoc"]
+test = ["pandas", "polars", "pytest"]
+
+[[package]]
 name = "duckdb"
 version = "0.9.1"
 description = "DuckDB embedded database"
@@ -113,4 +128,4 @@ test = ["enum34", "ipaddress", "mock", "pywin32", "wmi"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "9f05f6d43ce31b8d226e3641a73fb8beee0301ca0c852e0cbf6a2c685094307a"
+content-hash = "dc79d6246a877b525a271f651119f226a7f0b6a5b1d80182d22aafd75781a9dd"

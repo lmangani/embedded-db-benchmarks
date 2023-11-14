@@ -10,6 +10,7 @@ python = "^3.9"
 chdb = "^0.16.0rc2"
 duckdb = "^0.9.1"
 glaredb = "^0.5.1"
+databend = "^1.2.207"
 
 [tool.poetry.dev-dependencies]
 

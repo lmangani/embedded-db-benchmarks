@@ -4,10 +4,12 @@ import psutil
 from datetime import datetime
 from contextlib import contextmanager
 
+# Import Everything for equal memory conditions
 import duckdb
 import chdb
 from chdb import session as chs
 import glaredb
+from databend import SessionContext
 
 DBNAME = os.getenv('DBNAME', '*')
 ITERATIONS = int(os.getenv('ITERATIONS', 3))
@@ -74,6 +76,10 @@ def main():
             print("Testing glaredb")
             gdb = glaredb.connect()
             benchmark_db("glaredb", lambda query: gdb.sql(query).show())
-        
+        case "glaredb":
+            print("Testing databend")
+            databendx = SessionContext()
+            benchmark_db("databend", lambda query: databendx.sql(query).collect())
+
 if __name__ == "__main__":
     main()
