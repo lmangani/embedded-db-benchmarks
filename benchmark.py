@@ -10,6 +10,7 @@ import chdb
 from chdb import session as chs
 import glaredb
 from databend import SessionContext
+import datafusion
 
 DBNAME = os.getenv('DBNAME', '*')
 ITERATIONS = int(os.getenv('ITERATIONS', 3))
@@ -82,8 +83,8 @@ def main():
             benchmark_db("databend", lambda query: databendx.sql(query).collect())
         case "datafusion":
             print("Testing datafusion")
-            databendx = SessionContext()
-            benchmark_db("datafusion", lambda query: databendx.sql(query).collect())
+            datafusionx = datafusion.SessionContext()
+            benchmark_db("datafusion", lambda query: datafusionx.sql(query).collect())
 
 if __name__ == "__main__":
     main()
