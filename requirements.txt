@@ -1,5 +1,5 @@
 poetry
 psutil
-chdb==0.16.0rc2
+chdb
 duckdb
 glaredb
