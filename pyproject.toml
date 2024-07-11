@@ -1,17 +1,17 @@
 [tool.poetry]
 name = "embedded-olap-benchmarks"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = ["Lorenzo Mangani <lorenzo.mangani@gmail.com>"]
 
 [tool.poetry.dependencies]
 psutil = "^5.9.6"
 python = "^3.9"
-chdb = "^0.16.0rc2"
-duckdb = "^0.9.1"
-glaredb = "^0.5.1"
-databend = "^1.2.207"
-datafusion = "^32.0.0"
+chdb = "^2.0.0b1"
+duckdb = "^1.0.0"
+glaredb = "^0.9.4"
+databend = "^1.2.453"
+datafusion = "^39.0.0"
 
 [tool.poetry.dev-dependencies]
 
