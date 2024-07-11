@@ -28,8 +28,8 @@ jobs:
         poetry lock --no-update
         poetry install
         wget -q https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet
-    - name: Workflow Telemetry
-      uses: runforesight/workflow-telemetry-action@v1.8.7     
+#    - name: Workflow Telemetry
+#      uses: runforesight/workflow-telemetry-action@v1.8.7     
     - name: Test with poetry
       env:
         ITERATIONS: ${{ github.event.inputs.ITERATIONS || 3 }}
