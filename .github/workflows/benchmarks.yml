@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install poetry pytest
-        poetry lock [--no-update]
+        poetry lock --no-update
         poetry install
         wget -q https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-01.parquet
     - name: Workflow Telemetry
